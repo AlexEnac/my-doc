@@ -1,0 +1,24 @@
+{
+    "name": "my-doc",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\" ",
+        "check-types": "tsc --pretty --noEmit",
+        "prepare": "husky install",
+        "check-format": "prettier --check .",
+        "check-lint": "eslint . --ext ts --ext tsx --ext js",
+        "format": "prettier --write .",
+        "test-all": "npm run check-format && npm run check-lint && npm run check-types && npm run build"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "concurrently": "^7.5.0",
+        "husky": "^8.0.0",
+        "eslint": "^8.27.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-react": "^7.31.10",
+        "prettier": "^2.7.1"
+    }
+}
